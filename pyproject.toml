@@ -1,0 +1,10 @@
+[project]
+name = "tsunami"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "connecpy>=1.4.2",
+    "hypercorn>=0.17.3",
+]
