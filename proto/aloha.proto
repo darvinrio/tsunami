@@ -5,10 +5,14 @@ package aloha.v1;
 // Service definition for Ethereum address operations
 service AlohaEthereumService {
   // Endpoint to checksum an Ethereum address
-  rpc ChecksumAddress(ChecksumAddressRequest) returns (ChecksumAddressResponse) {}
+  rpc ChecksumAddress(ChecksumAddressRequest) returns (ChecksumAddressResponse) {
+    option idempotency_level = NO_SIDE_EFFECTS;
+  }
   
   // Endpoint to return a null address
-  rpc GetNullAddress(NullAddressRequest) returns (NullAddressResponse) {}
+  rpc GetNullAddress(NullAddressRequest) returns (NullAddressResponse) {
+    option idempotency_level = NO_SIDE_EFFECTS;
+  }
 }
 
 // Request message containing the Ethereum address to be checksummed
